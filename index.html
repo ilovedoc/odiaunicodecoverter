@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ଓଡ଼ିଆ ଅକ୍ରୁଟି ଟୁ ୟୁନିକୋଡ୍ କନ୍ଭର୍ଟର | Odia Akruti to Unicode Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Odia Converter Logo">
+            <h1>ଓଡ଼ିଆ ଅକ୍ରୁଟି-ୟୁନିକୋଡ୍ କନ୍ଭର୍ଟର</h1>
+        </div>
+    </header>
+    
+    <main>
+        <div class="converter-container">
+            <div class="input-section">
+                <label for="input-text">ଟେକ୍ଷଟ୍ ଟାଇପ୍ କରନ୍ତୁ (Type your text):</label>
+                <textarea id="input-text" placeholder="ଏଠାରେ ଟାଇପ୍ କରନ୍ତୁ..."></textarea>
+                <div class="options">
+                    <label>କନ୍ଭର୍ଟ୍ କରନ୍ତୁ (Convert):</label>
+                    <select id="conversion-type">
+                        <option value="akruti-to-unicode">Akruti to Unicode</option>
+                        <option value="unicode-to-akruti">Unicode to Akruti</option>
+                    </select>
+                    <button id="convert-btn">କନ୍ଭର୍ଟ୍ କରନ୍ତୁ</button>
+                    <button id="clear-btn">ସଫା କରନ୍ତୁ</button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <label for="output-text">ଫଳାଫଳ (Result):</label>
+                <textarea id="output-text" readonly></textarea>
+                <div class="actions">
+                    <button id="copy-btn">କପି କରନ୍ତୁ</button>
+                    <button id="download-btn">ଡାଉନଲୋଡ୍ କରନ୍ତୁ</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>କିପରି ବ୍ୟବହାର କରିବେ (How to use):</h2>
+            <ol>
+                <li>ଉପର ବାକ୍ସରେ ଟେକ୍ଷଟ୍ ଟାଇପ୍ କରନ୍ତୁ ବା ପେଷ୍ଟ୍ କରନ୍ତୁ</li>
+                <li>କନ୍ଭର୍ସନ୍ ପ୍ରକାର ଚୟନ କରନ୍ତୁ (Akruti to Unicode ବା ବିପରୀତ)</li>
+                <li>"କନ୍ଭର୍ଟ୍ କରନ୍ତୁ" ବଟନ୍ ଦବାନ୍ତୁ</li>
+                <li>ନିମ୍ନ ବାକ୍ସରେ ଫଳାଫଳ ଦେଖନ୍ତୁ</li>
+            </ol>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 ଓଡ଼ିଆ ଅକ୍ରୁଟି-ୟୁନିକୋଡ୍ କନ୍ଭର୍ଟର | ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="converter.js"></script>
+</body>
+</html>
