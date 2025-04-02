@@ -1,0 +1,51 @@
+// Akruti to Unicode mapping table
+const akrutiToUnicodeMap = {
+    // Vowels
+    'c': 'ଅ', 'C': 'ଆ', 'e': 'ଇ', 'E': 'ଈ', 'f': 'ଉ', 'F': 'ଊ',
+    'g': 'ଋ', 'G': 'ୠ', 'h': 'ଌ', 'H': 'ୡ', 'i': 'ଏ', 'I': 'ଐ',
+    'j': 'ଓ', 'J': 'ଔ',
+    
+    // Consonants
+    'k': 'କ', 'K': 'ଖ', 'l': 'ଗ', 'L': 'ଘ', 'm': 'ଙ',
+    'n': 'ଚ', 'N': 'ଛ', 'o': 'ଜ', 'O': 'ଝ', 'p': 'ଞ',
+    'q': 'ଟ', 'Q': 'ଠ', 'r': 'ଡ', 'R': 'ଢ', 's': 'ଣ',
+    't': 'ତ', 'T': 'ଥ', 'u': 'ଦ', 'U': 'ଧ', 'v': 'ନ',
+    'w': 'ପ', 'W': 'ଫ', 'x': 'ବ', 'X': 'ଭ', 'y': 'ମ',
+    'z': 'ଯ', 'Z': 'ୟ', '\\': 'ର', ']': 'ଲ', '}': 'ଳ',
+    '`': 'ଶ', '~': 'ଷ', '^': 'ସ', '_': 'ହ',
+    
+    // Diacritics and others
+    'd': 'ା', 'D': 'ି', '#': 'ୀ', 'S': 'ୁ', '%': 'ୂ',
+    '&': 'ୃ', 'b': 'େ', 'B': 'ୈ', 'M': 'ୋ', '*': 'ୌ',
+    'a': 'ଂ', 'A': 'ଃ', '@': '୍', '[': '୍ର', '{': 'ର୍',
+    '|': 'ଲ୍', ':': 'ଳ୍', '"': 'ଶ୍', '<': 'ଷ୍', '>': 'ସ୍',
+    '?': 'ହ୍', ' ': ' ', '\n': '\n',
+    
+    // Numbers
+    '0': '୦', '1': '୧', '2': '୨', '3': '୩', '4': '୪',
+    '5': '୫', '6': '୬', '7': '୭', '8': '୮', '9': '୯'
+};
+
+// Unicode to Akruti mapping table (reverse of above)
+const unicodeToAkrutiMap = {};
+for (const key in akrutiToUnicodeMap) {
+    unicodeToAkrutiMap[akrutiToUnicodeMap[key]] = key;
+}
+
+function convertAkrutiToUnicode(text) {
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        result += akrutiToUnicodeMap[char] || char;
+    }
+    return result;
+}
+
+function convertUnicodeToAkruti(text) {
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        result += unicodeToAkrutiMap[char] || char;
+    }
+    return result;
+}
